@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 
 start_time = time.time()
 
-workingDir = "C:/Users/tanyixin/Desktop/Commodity Price Forecasting/Compilation/"  ##### TO UPDATE #####
+workingDir = "C:/Users/tanyixin/Desktop/Commodity Price Forecasting/Compilation/"
 
 coal_sulphur = pd.read_csv(workingDir + "coal_sulphur.csv").fillna('nan')
 hcc_daily = pd.read_csv(workingDir + "hcc_daily.csv").fillna('nan')
@@ -122,10 +122,10 @@ for col in range(data_remaining.shape[1]-1):
 # 
 # =============================================================================
 ## Generate CSV file ##
-data_remaining.to_csv('C:/Users/tanyi9/Desktop/Commodity Price Forecasting/Compilation/hcc_compilation.csv', index=False)
+data_remaining.to_csv('C:/Users/tanyixin/Desktop/Commodity Price Forecasting/Compilation/hcc_compilation.csv', index=False)
 
 ## Read CSV file ##
-data_remaining = pd.read_csv("C:/Users/tanyi9/Desktop/Commodity Price Forecasting/Compilation/hcc_compilation.csv").fillna('nan')            
+data_remaining = pd.read_csv("C:/Users/tanyixin/Desktop/Commodity Price Forecasting/Compilation/hcc_compilation.csv").fillna('nan')            
             
 ## Take Data from April 2014 onwards ##
 data_remaining = data_remaining[11:].reset_index(drop=True)
